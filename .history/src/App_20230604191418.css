@@ -1,0 +1,5 @@
+.App {
+  display: flex;
+  align-items:start;
+  gap: 16px;
+}

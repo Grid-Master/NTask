@@ -1,0 +1,27 @@
+.navbar
+    width: 200px
+    height: 158px
+    background: #FFFFFF
+    border-radius: 8px
+    &__imagecontainer
+        padding: 16px 0
+        margin-left: 16px
+    &__item
+        padding: 8px 16px
+        cursor: pointer
+        font-weight: 500
+        font-size: 16px
+        line-height: 150%
+        color: #484848
+        transition: .3s
+        &:hover
+            color: #477AFF
+
+    &__active
+        background: #E9EFFF
+        color: #477AFF
+
+@media screen and (max-width: 600px)
+    .navbar
+        width: 288px
+        height: 158px

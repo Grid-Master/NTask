@@ -1,0 +1,32 @@
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+export interface IPhoto {
+  id: number;
+  isSelected: boolean;
+  file: any;
+}
+
+const gallerySlice = createSlice({
+  name: 'users',
+  initialState: {
+    photos: [] as IPhoto[],
+  },
+  reducers: {
+    addPhoto(state, action: PayloadAction<IPhoto>) {
+      state.photos.unshift(action.payload);
+    },
+    pickPhoto(state, action: PayloadAction<number>) {
+      state.photos.forEach((photo) => {
+        console.log(2);
+        if (photo.id === action.payload) {
+          photo.isSelected = !photo.isSelected;
+        }
+      });
+    },
+    removePhotos(state, action: PayloadAction<number[]>) {},
+  },
+});
+
+export const { addPhoto, pickPhoto, removePhotos } = gallerySlice.actions;
+
+export default gallerySlice.reducer;

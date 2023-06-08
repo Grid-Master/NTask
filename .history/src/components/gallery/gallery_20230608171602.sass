@@ -1,0 +1,81 @@
+.gallery
+    background: #FFFFFF
+    border-radius: 8px
+    padding: 16px
+    width: 100%
+    >div
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 10px
+    &__title
+        font-weight: 600
+        font-size: 24px
+        line-height: 150%
+        color: #484848
+    &__btn
+        font-weight: 500
+        font-size: 16px
+        line-height: 100%
+        color: #FFFFFF
+        background: #477AFF
+        border-radius: 20px
+        padding: 12px 16px
+        border: none
+        outline: none
+        cursor: pointer
+        transform: translateX(367px)
+        transition: .3s
+        &:hover
+            opacity: .8
+    &__list
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        gap: 16px
+        &-item
+            cursor: pointer
+            width: 120px
+            height: 120px
+            img
+                object-fit: cover
+
+                border-radius: 8px
+        &-item-active
+            cursor: pointer
+            width: 114.5px
+            height: 114.5px
+            border: 3px solid #FF4747
+            border-radius: 8px
+            img
+                object-fit: cover
+                width: 112px !important
+                height: 112px !important
+                padding: 1.5px
+                border-radius: 8px
+
+.hidden
+    opacity: 0
+    height: 0
+    width: 0
+    line-height: 0
+    overflow: hidden
+    padding: 0
+    margin: 0
+
+@media screen and (max-width: 1200px)
+    .gallery
+        width: calc( 100% - 32px )
+@media screen and (max-width: 1000px)
+    .gallery
+        &__btn
+            transform: translateX(157px)
+@media screen and (max-width: 600px)
+    .gallery
+        >div
+            flex-direction: column
+            align-items: start
+        &__title
+            margin-bottom: 10px
+        &__btn
+            transform: translateX(0px)
