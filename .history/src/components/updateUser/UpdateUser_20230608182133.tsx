@@ -47,7 +47,7 @@ const UpdateUser: FC = () => {
         };
         dispatch(updateUser(updatedUser));
         alert('Данные пользователя успешно обновлены');
-        navigate('/NTask/users');
+        navigate('/users');
       }
     } else {
       if (name && date) {
