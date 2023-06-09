@@ -1,7 +1,5 @@
 .userList
-    display: flex
-    flex-direction: column
-    width: 984px
+    width: 100%
     background: #FFFFFF
     border-radius: 8px
     padding: 16px
@@ -59,57 +57,39 @@
             background-color: #EEEEEE
             border-radius: 8px !important
     &__grid
-        font-weight: 500
-        font-size: 16px
-        line-height: 150%
-        color: #484848
         margin-top: 10px
         display: grid
-        grid-template-columns: repeat(4, 238px)
+        grid-template-columns: repeat(4, 231px)
         grid-column-gap: 0px
         grid-row-gap: 0px
         border-radius: 8px
-        >li
+        >div
             border: 1px solid #EEEEEE
-            padding: 8px 0
-            padding-left: 8px
-        li:first-child,li:nth-child(2),li:nth-child(3),li:nth-child(4)
-            background: #EEEEEE
-        li:first-child
-            border-radius: 8px 0 0 0
-        li:nth-child(4)
-            border-radius: 0 8px 0 0
-        li:last-child
-            border-radius: 0 0 8px 0
-        li:nth-last-child(4)
-            border-radius: 0 0 0 8px
 
 @media screen and (max-width: 1200px)
     .userList
         width: calc( 100% - 32px )
-@media screen and (max-width: 1000px)
-    .userList
-        &__grid
-            grid-template-columns: repeat(4, 142px)
 @media screen and (max-width: 600px)
     .userList
+        &__table
+            display: block
+            overflow-x: scroll
+            td
+                width: 131px
+            &::-webkit-scrollbar
+                // width: 4px
+                scroll-margin-top: 5px
+                height: 4px
+                border: 1px solid #d5d5d5
+            &::-webkit-scrollbar-track
+                border-radius: 0
+                background: #eeeeee
+            &::-webkit-scrollbar-thumb
+                border-radius: 0
+                background: #b0b0b0
+                cursor: pointer
         >div
             flex-direction: column
             align-items: start
         &__title
             margin-bottom: 10px
-        &__grid
-            overflow-x: scroll
-            padding-bottom: 5px
-            &::-webkit-scrollbar
-                border-radius: 2px
-                scroll-margin-top: 5px
-                height: 4px
-                border: 1px solid #d5d5d5
-            &::-webkit-scrollbar-track
-                border-radius: 2px
-                background: #eeeeee
-            &::-webkit-scrollbar-thumb
-                border-radius: 2px
-                background: #b0b0b0
-                cursor: pointer

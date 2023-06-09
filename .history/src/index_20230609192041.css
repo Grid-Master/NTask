@@ -46,9 +46,6 @@ body {
   background: #EEEEEE;
 ;
 }
-input {
-	font-family: Montserrat;
-}
 
 #root {
 	display: flex;

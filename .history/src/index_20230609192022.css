@@ -46,15 +46,11 @@ body {
   background: #EEEEEE;
 ;
 }
-input {
-	font-family: Montserrat;
-}
 
 #root {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
 }
 
 code {

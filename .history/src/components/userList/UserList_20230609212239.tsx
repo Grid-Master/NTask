@@ -26,6 +26,26 @@ const UserList: FC = () => {
           Добавить пользователя
         </button>
       </div>
+      {/* <table className="userList__table">
+        <tr className="userList__table-info">
+          <td>Имя</td>
+          <td>Дата рождения</td>
+          <td></td>
+          <td></td>
+        </tr>
+        {users.map((user) => (
+          <tr key={user.id}>
+            <td>{user.name}</td>
+            <td>{user.date}</td>
+            <td className="userList__table-btn" onClick={() => deleteHandler(user.id)}>
+              Удалить
+            </td>
+            <td className="userList__table-btn" onClick={() => updateHandler(`${user.id}`)}>
+              Изменить
+            </td>
+          </tr>
+        ))}
+      </table> */}
       <ul className="userList__grid">
         <li className="userList__grid-name">Имя</li>
         <li>Дата рождения</li>

@@ -20,30 +20,32 @@ const UserList: FC = () => {
 
   return (
     <div className="userList">
-      <div className="userList__container">
+      <div>
         <h1 className="userList__title">Пользователи</h1>
         <button className="userList__addUserBtn" onClick={() => updateHandler('createuser')}>
           Добавить пользователя
         </button>
       </div>
-      <ul className="userList__grid">
-        <li className="userList__grid-name">Имя</li>
-        <li>Дата рождения</li>
-        <li></li>
-        <li></li>
+      <table className="userList__table">
+        <tr className="userList__table-info">
+          <td>Имя</td>
+          <td>Дата рождения</td>
+          <td></td>
+          <td></td>
+        </tr>
         {users.map((user) => (
-          <>
-            <li>{user.name}</li>
-            <li>{user.date}</li>
-            <li className="userList__table-btn" onClick={() => deleteHandler(user.id)}>
+          <tr key={user.id}>
+            <td>{user.name}</td>
+            <td>&nbsp; &nbsp;{user.date} &nbsp; &nbsp; &nbsp; &nbsp;</td>
+            <td className="userList__table-btn" onClick={() => deleteHandler(user.id)}>
               Удалить
-            </li>
-            <li className="userList__table-btn" onClick={() => updateHandler(`${user.id}`)}>
+            </td>
+            <td className="userList__table-btn" onClick={() => updateHandler(`${user.id}`)}>
               Изменить
-            </li>
-          </>
+            </td>
+          </tr>
         ))}
-      </ul>
+      </table>
     </div>
   );
 };
